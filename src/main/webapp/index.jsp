@@ -30,10 +30,146 @@
 
 
 <%--
+exp-1
+----------
+sudo su
+yum install git -y
+git config --global user.name "pradeepmupp"
+git config --global user.email "pradeepmuppavarapu2002@gmail.com"
+git clone ..........
+cd filename/
+nano sample
+git status
+git add .
+git status
+git commit -m "first commit"
+git status
+git push
+-----------
+exp-2
+----------
+sudo su
+mkdir ex
+cd ex/
+nano sample
+git init
+git branch -m main
+git add .
+git status
+git commit -m "first commit"
+git remote add origin ...........repo-url
+git push -f origin main
+-----------
+exp-3
+----------
+sudo su
+git clone ........
+cd file/
+git status
+...create a file in repo....
+git fetch
+git status
+git pull
+git status
+ls
+-----------
+exp-4
+-----------
+MERGE
+---
+sudo su
+git clone .....
+cd file/
+nano file1
+git add .
+git status
+git commit -m "first commit"
+git status
+git log
+git checkout -b branch1
+nano file2
+git add .
+git status
+git commit -m "second commit"
+git status 
+git log
+git checkout main
+git log
+git merge branch1
+git log
+git push
+git checkout branch1
+git push origin branch1
+----
+REBASE
+----
+git clone .....
+cd file/
+nano file1
+git add .
+git status
+git commit -m "first commit"
+git status
+git log
+git checkout -b branch1
+nano file2
+git add .
+git status
+git commit -m "second commit"
+git status 
+git log
+git checkout main
+git log
+git rebase branch1
+git log
+git push
+ls
+git checkout branch1
+git push origin branch1
+
+-------->tomcat installation<-----------
+----------
+sudo su
+yum install git -y
+yum install java-17-amazon-corretto-devel -y
+nano .bashrc
+   export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
+source .bashrc
+cd /opt
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.tar.gz
+tar -zxvf ap..clicktab
+mv ap..clicktab  tomcat
+find -name startup.sh
+   ln -s /opt/tomcat/bin/startup.sh /usr/bin/tomcat-start
+   ln -s /opt/tomcat/bin/shutdown.sh /usr/bin/tomcat-stop
+find -name context.xml
+   nano ..hostmanager.....
+   nano ...manager.....
+find -name tomcat-users.xml
+   nano .......
+tomcat-start
+set in bound rules and copy public ip and paste in url
+----------
+
+maven installation
+----------
+sudo su
+yum install git -y
+yum install java-17-amazon-corretto-devel -y
+nano .bashrc
+  export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
+  export M2_HOME=/opt/maven
+  export M2=/opt/maven/bin
+  export PATH=$PATH:$M2
+source .bashrc
+cd /opt
+wget https://.......
+tar -zxvf ap..clicktab 
+mv ap..clicktab maven
 
 
-
-
+-------------------->maven deployment manual<-------------------------------
+mvn archetype:generate -DgroupId=com.example -DartifactId=webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 
 
 
